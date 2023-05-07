@@ -1,66 +1,61 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+Movie Search and Favorites Web Application
+This web application allows users to search for and view information about movies. It also provides additional features such as the ability to view similar movies, save favorite movies, and view a list of favorite movies for the logged-in user. The application is built using a front-end framework, HTML, and a back-end framework, Laravel. It uses the Open Movie Database (OMDb) API to retrieve movie data and a MySQL database to store user data and favorite movies.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Installation and Setup
+Clone the repository from GitHub:
+bash
+Copy code
+git clone https://github.com/<username>/<repository_name>.git
+Install the required dependencies using Composer:
+bash
+Copy code
+composer install
+Create a new .env file and fill in the required details such as the database credentials:
+bash
+Copy code
+cp .env.example .env
+Generate an application key:
+bash
+Copy code
+php artisan key:generate
+Migrate the database:
+bash
+Copy code
+php artisan migrate
+Seed the database with sample data:
+bash
+Copy code
+php artisan db:seed
+Start the server:
+bash
+Copy code
+php artisan serve
+Open the application in a web browser by visiting http://localhost:8000.
+Architecture and Design
+Front-End
+The front-end of the application is built using HTML, CSS, and JavaScript. The front-end framework used for this project is Bootstrap. Bootstrap is a popular framework for building responsive and mobile-first websites. It provides pre-built UI components that can be used to build web applications quickly.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Back-End
+The back-end of the application is built using Laravel, a PHP-based web application framework. Laravel provides several features that make web application development easier, such as routing, controllers, and database migration tools. The application uses the OMDb API to retrieve movie data and store user data and favorite movies in a MySQL database.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Database
+The application uses a MySQL database to store user data and favorite movies. The database schema is designed to support user authentication and favorite movie storage. The users table stores user information such as the username, email, and password. The favorites table stores the user's favorite movies.
 
-## Learning Laravel
+Authentication
+The application allows users to create an account, log in, and save favorite movies. The authentication system is implemented using Laravel's built-in authentication system. The users table stores the user's email and hashed password. When a user logs in, the application checks the email and password against the database. If the credentials are correct, the user is authenticated and can access the protected pages of the application.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Continuous Integration/Continuous Delivery (CI/CD)
+The application uses GitHub Actions for continuous integration and continuous delivery. GitHub Actions is a platform that allows developers to automate tasks such as building, testing, and deploying code. The application is automatically built and tested every time a new code change is pushed to the repository. If the tests pass, the code is automatically deployed to a production environment. This ensures that the code is always up-to-date and the application is running smoothly.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Version Control
+The application code is stored in a public repository on GitHub. GitHub is a web-based hosting service for version control using git. It provides several features that make collaborative software development easier, such as pull requests, code reviews, and issue tracking. Using GitHub, developers can collaborate on the code, track issues, and make sure that the code is always up-to-date.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Conclusion
+This web application provides a simple and easy-to-use interface for searching and viewing information about movies. It also provides additional features such as saving favorite movies, which enhances the user experience. The application is built using a modern web development stack and follows
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

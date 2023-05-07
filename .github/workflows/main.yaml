@@ -1,0 +1,16 @@
+language: php
+php:
+  - 7.4
+
+services:
+  - mysql
+
+before_script:
+  - cp .env.example .env
+  - mysql -e 'CREATE DATABASE laravel;'
+  - composer install --no-interaction
+  - php artisan key:generate
+  - php artisan migrate --seed
+
+script:
+  - vendor/bin/phpunit

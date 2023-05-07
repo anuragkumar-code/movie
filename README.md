@@ -5,9 +5,9 @@
 
 <h5>This web application allows users to search for and view information about movies. It also provides additional features such as the ability to view similar movies, save favorite movies, and view a list of favorite movies for the logged-in user. The application is built using a front-end framework, HTML, and a back-end framework, Laravel. It uses the Open Movie Database (OMDb) API to retrieve movie data and a MySQL database to store user data and favorite movies.</h5>
 
-<h5>Important Note</h5>
-<h3>1). User is required to create new database and setup .env file, and then run the migration command.</h3>
-<h3>2). User is required to sign up first, for the access of this web application.</h3>
+<h3 style="color:red;">Important Note</h3>
+<h5>1). User is required to create new database and setup .env file, and then run the migration command.</h5>
+<h5>2). User is required to sign up first, for the access of this web application.</h5>
 
 <h2>Installation and Setup:</h2>
 <h3>Clone the repository from GitHub</h3>

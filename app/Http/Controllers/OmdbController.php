@@ -11,28 +11,30 @@ class OmdbController extends Controller
 {
     public function testapi(){        
 
-        $curl = curl_init();
+        // $curl = curl_init();
 
-        curl_setopt_array($curl, array(
-        CURLOPT_URL => 'http://www.omdbapi.com/?i=tt3896198&apikey=c2f31e93',
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_ENCODING => '',
-        CURLOPT_MAXREDIRS => 10,
-        CURLOPT_TIMEOUT => 0,
-        CURLOPT_FOLLOWLOCATION => true,
-        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-        CURLOPT_CUSTOMREQUEST => 'GET',
-        ));
+        // curl_setopt_array($curl, array(
+        // CURLOPT_URL => 'http://www.omdbapi.com/?i=tt3896198&apikey=c2f31e93',
+        // CURLOPT_RETURNTRANSFER => true,
+        // CURLOPT_ENCODING => '',
+        // CURLOPT_MAXREDIRS => 10,
+        // CURLOPT_TIMEOUT => 0,
+        // CURLOPT_FOLLOWLOCATION => true,
+        // CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        // CURLOPT_CUSTOMREQUEST => 'GET',
+        // ));
 
-        $response = curl_exec($curl);
+        // $response = curl_exec($curl);
 
-        curl_close($curl);
-        // echo $response;
-        $responseArray = json_decode($response, true);
+        // curl_close($curl);
+        // // echo $response;
+        // $responseArray = json_decode($response, true);
 
-        // echo "<pre>"; print_r($responseArray); exit;
+        // // echo "<pre>"; print_r($responseArray); exit;
 
-        return view ('welcome',compact('responseArray'));
+        // return view ('welcome',compact('responseArray'));
+
+        return redirect('sign-in');
 
     
 
